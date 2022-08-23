@@ -1,6 +1,6 @@
 package com.sadovnick.kata.validate;
 
-import com.sadovnick.kata.enumic.CalcNumType;
+import com.sadovnick.kata.type.CalcNumType;
 import com.sadovnick.kata.model.CalcNumber;
 
 /**
@@ -11,7 +11,7 @@ import com.sadovnick.kata.model.CalcNumber;
  */
 public interface Validate {
 
-    void emptyString(String romanNumber);
+    String prepareString(String romanNumber);
 
     void checkForTwoNumbers(String[] strings);
 

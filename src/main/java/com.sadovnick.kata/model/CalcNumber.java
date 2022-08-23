@@ -1,6 +1,6 @@
 package com.sadovnick.kata.model;
 
-import com.sadovnick.kata.enumic.CalcNumType;
+import com.sadovnick.kata.type.CalcNumType;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

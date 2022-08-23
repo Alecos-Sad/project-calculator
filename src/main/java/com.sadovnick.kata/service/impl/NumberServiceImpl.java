@@ -2,7 +2,7 @@ package com.sadovnick.kata.service.impl;
 
 import com.sadovnick.kata.converter.Converter;
 import com.sadovnick.kata.converter.impl.ConverterImpl;
-import com.sadovnick.kata.enumic.CalcNumType;
+import com.sadovnick.kata.type.CalcNumType;
 import com.sadovnick.kata.model.CalcNumber;
 import com.sadovnick.kata.service.NumberService;
 import com.sadovnick.kata.validate.Validate;
@@ -32,17 +32,17 @@ public class NumberServiceImpl implements NumberService {
     /**
      * The method parses the character and converts it to the Arabic system with type assignment.
      *
-     * @param symbol - symbol to parse.
+     * @param str - symbol to parse.
      * @return - number object with value and type.
      */
     @Override
-    public CalcNumber parseNumber(String symbol) {
+    public CalcNumber parseNumber(String str) {
         int value;
-        try {
-            value = Integer.parseInt(symbol);
+        if ((str.replaceAll("[0123456789]", "")).length() == 0) {
+            value = Integer.parseInt(str);
             calcNumType = CalcNumType.ARABIC;
-        } catch (NumberFormatException exception) {
-            value = converter.convertToArabic(symbol);
+        } else {
+            value = converter.convertToArabic(str);
             calcNumType = CalcNumType.ROMAN;
         }
         return new CalcNumber(value, calcNumType);
@@ -52,13 +52,13 @@ public class NumberServiceImpl implements NumberService {
      * The method parses the character and converts it to the Arabic system with type assignment,
      * but additionally compares types.
      *
-     * @param symbol      - symbol to parse.
+     * @param str         - str to parse.
      * @param calcNumType - system type (Roman or Arabic).
      * @return - number object with value and type.
      */
     @Override
-    public CalcNumber parseNumber(String symbol, CalcNumType calcNumType) {
-        CalcNumber calcNumber = parseNumber(symbol);
+    public CalcNumber parseNumber(String str, CalcNumType calcNumType) {
+        CalcNumber calcNumber = parseNumber(str);
         validate.illegalCharacter(calcNumber, calcNumType);
         return calcNumber;
     }

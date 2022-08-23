@@ -1,4 +1,4 @@
-package com.sadovnick.kata.enumic;
+package com.sadovnick.kata.type;
 
 /**
  * Number system enumeration class

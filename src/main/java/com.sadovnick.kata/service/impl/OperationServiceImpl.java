@@ -2,7 +2,7 @@ package com.sadovnick.kata.service.impl;
 
 import com.sadovnick.kata.converter.Converter;
 import com.sadovnick.kata.converter.impl.ConverterImpl;
-import com.sadovnick.kata.enumic.CalcNumType;
+import com.sadovnick.kata.type.CalcNumType;
 import com.sadovnick.kata.exception.IllegalCharacterException;
 import com.sadovnick.kata.exception.WrongInputException;
 import com.sadovnick.kata.mathOperation.MathOperation;

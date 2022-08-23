@@ -48,8 +48,7 @@ public class Calculator {
             if (enterLine.equals("ex")) {
                 break;
             }
-            validate.emptyString(enterLine);
-            if (operation(enterLine)) {
+            if (operation(validate.prepareString(enterLine))) {
                 break;
             }
         }
@@ -67,7 +66,6 @@ public class Calculator {
             String[] digits = enterLine.split("[+-/*]");
             String operation = operationService.catchOperation(Optional.of(enterLine));
             validate.checkForTwoNumbers(digits);
-
             CalcNumber firstCalcNumber = numberService.parseNumber(digits[0]);
             CalcNumber secondCalcNumber = numberService.parseNumber(digits[1], firstCalcNumber.getType());
             String result = operationService.calculation(firstCalcNumber, secondCalcNumber, operation);

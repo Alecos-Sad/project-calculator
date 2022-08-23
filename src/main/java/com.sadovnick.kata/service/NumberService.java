@@ -1,6 +1,6 @@
 package com.sadovnick.kata.service;
 
-import com.sadovnick.kata.enumic.CalcNumType;
+import com.sadovnick.kata.type.CalcNumType;
 import com.sadovnick.kata.model.CalcNumber;
 
 /**
