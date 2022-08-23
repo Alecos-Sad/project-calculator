@@ -1,7 +1,8 @@
 package service.impl;
 
-import enumic.CalcNumType;
-import model.CalcNumber;
+import com.sadovnick.kata.enumic.CalcNumType;
+import com.sadovnick.kata.model.CalcNumber;
+import com.sadovnick.kata.service.impl.OperationServiceImpl;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

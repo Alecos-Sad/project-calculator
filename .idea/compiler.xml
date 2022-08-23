@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="project-calculator" />
         <module name="Project Calculator" />
+        <module name="ProjectCalculator" />
       </profile>
     </annotationProcessing>
   </component>

@@ -1,5 +1,6 @@
 package converter.impl;
 
+import com.sadovnick.kata.converter.impl.ConverterImpl;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
