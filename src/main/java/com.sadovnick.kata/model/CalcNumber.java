@@ -13,7 +13,6 @@ import lombok.Setter;
  * @version 1.0
  */
 @AllArgsConstructor
-@NoArgsConstructor
 @Getter
 @Setter
 public class CalcNumber {

@@ -9,6 +9,6 @@ import com.sadovnick.kata.calculator.Calculator;
 public class Main {
 
     public static void main(String[] args) {
-       new Calculator().start();
+       new Calculator().calc();
     }
 }

@@ -35,7 +35,7 @@ public class Calculator {
     /**
      * Method displays a primitive start menu.
      */
-    public void start() {
+    public void calc() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter an operation with two numbers (only Arabic or only Roman)");
         System.out.println("Allowed operations |+ - / *|");
